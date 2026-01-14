@@ -1,0 +1,30 @@
+h1 {
+  color: red;
+}
+
+.paragraph {
+  font-size: 20px;
+}
+
+#special {
+  font-weight: 600;
+}
+
+div ul {
+  color: green;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+p ~ span {
+  font-weight: 600;
+  font-style: italic;
+}
+
+p > span {
+  font-weight: 600;
+  font-style: italic;
+}
+
+p + p {
+  background-color: red;
+}
