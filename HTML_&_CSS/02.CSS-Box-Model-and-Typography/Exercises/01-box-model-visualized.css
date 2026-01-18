@@ -1,0 +1,28 @@
+body {
+  width: 50%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+section {
+  border: 1px dashed black;
+  padding: 10px 30px 30px 30px;
+}
+
+.margin{
+  background-color: orange;
+}
+
+.border {
+  background-color: pink;
+}
+
+.padding{
+  background-color: lightgreen;
+}
+
+.content {
+  text-align: center;
+  padding-top: 25px;
+  background-color: lightblue;
+}
