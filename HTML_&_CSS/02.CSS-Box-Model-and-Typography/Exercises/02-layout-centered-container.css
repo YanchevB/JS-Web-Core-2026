@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+}
+
+.outer{
+  border: 1px solid green;
+  padding: 30px 60px
+}
+
+.inner {
+  border: 1px solid blue;
+}
+
+article {
+  border: 1px solid black;
+  padding: 40px;
+  margin: 25px;
+  text-align: center;
+}
