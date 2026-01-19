@@ -1,0 +1,47 @@
+* {
+  margin: 0px;
+  font-size: 17px;
+}
+
+body {
+  background-color: gray;
+}
+
+img {
+  width: 100%;
+}
+
+section {
+  margin: 30px auto;
+  background-color: white;
+  width: 30%;
+}
+
+article {
+  padding-bottom: 20px;
+}
+
+.text-container {
+  padding: 20px 20px 0px 20px;
+}
+
+.big-text {
+  font-weight: bold;
+  font-size: 20px ;
+  margin-bottom: 10px;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-style: italic;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.link {
+  margin-top: 50px;
+  font-weight: bold;
+}
