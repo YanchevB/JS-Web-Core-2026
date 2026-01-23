@@ -1,0 +1,40 @@
+body {
+  background-color: #eeeeee;
+}
+
+.wrapper {
+  width: 80%;
+  margin: auto;
+  margin-top: 40px;
+  border-radius: 5px;
+  padding: 25px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+header, section, footer {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 25px;
+  margin: 5px;
+}
+
+.main-ctr, .secondary-ctr {
+  display: flex;
+}
+
+.main-ctr section:first-of-type {
+  width: 70%;
+}
+
+.main-ctr section:last-of-type {
+  width: 30%
+}
+
+.secondary-ctr section:first-of-type {
+  width: 30%;
+}
+
+.secondary-ctr section:last-of-type {
+  width: 70%
+}
