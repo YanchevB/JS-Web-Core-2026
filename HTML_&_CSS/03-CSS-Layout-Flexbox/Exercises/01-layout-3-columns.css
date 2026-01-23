@@ -1,0 +1,60 @@
+body {
+  background-color: #eeeeee;
+}
+
+main {
+  width: 70%;
+  margin: auto;
+  margin-top: 40px;
+  padding: 10px 50px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+hr {
+  width: 10%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.top-section {
+  text-align: center;
+  width: 40%;
+  margin: auto;
+}
+
+.top-section p {
+  margin-top: 4px;
+  color: gray;
+  font-style: italic;
+}
+
+.top-section h2 {
+  margin-bottom: 15px
+}
+
+.middle-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px
+}
+
+.bottom-section {
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  color: gray
+}
+
+article h3 {
+  margin-bottom: 0px;
+}
+
+article p {
+  margin-top: 3px;
+}
+
+span {
+  font-style: italic;
+}
