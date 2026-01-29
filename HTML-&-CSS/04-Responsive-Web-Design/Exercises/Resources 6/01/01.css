@@ -1,0 +1,38 @@
+body {
+  background-color: #eeeeee;
+}
+
+.wrapper {
+  width: 80%;
+  margin: auto;
+  margin-top: 40px;
+  border-radius: 5px;
+  padding: 25px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+header, section, footer {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 25px;
+  margin: 5px;
+}
+
+.main-ctr{
+  display: flex;
+}
+
+.main-ctr section:first-of-type {
+  flex: 1 1 70%
+}
+
+.main-ctr section:last-of-type {
+  flex: 1 1 30%
+}
+
+@media (max-width: 800px) {
+  .main-ctr {
+    flex-direction: column;
+  }
+}
