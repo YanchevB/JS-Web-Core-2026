@@ -1,69 +1,123 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* General Styling for both views */
 body {
-  background-color: lightgray;
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
 }
 
 .table-1, .table-2 {
-  background-color: white;
-  margin: 2em;
-  border-radius: 5px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  overflow: hidden; /* Keeps rounded corners */
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.table-2 {
-  margin-top: -0.5em;
 }
 
 caption {
-  caption-side: top;
-  padding: 0.7em;
-  font-weight: bold;
-  font-size: 1.7em;
   text-align: left;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
 }
 
 th, td {
-  padding: 0.75em;
+  padding: 12px 20px;
   text-align: left;
+}
+
+/* --- Desktop View (1200px logic) --- */
+@media (min-width: 601px) {
+  thead {
+    background-color: #f9f9f9;
+  }
   
+  tr.gray-border {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Ensuring the long title behaves on desktop */
+  th:nth-child(2) {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
-tr {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-thead {
-  background-color: #eaeaea;
-}
-
+/* --- Mobile View (600px logic) --- */
 @media (max-width: 600px) {
-  table,
-  thead,
-  tbody,
-  tr,
-  th,
-  td {
+  /* Force table elements to stack */
+  table, thead, tbody, th, td, tr {
     display: block;
-    width: 100%;
   }
 
-  thead {
-    display: none;
+  .table-1, .table-2 {
+    margin: 30px;
   }
 
   caption {
     white-space: nowrap;
   }
+
+  tbody {
+    border-top: 2px solid black;
+  }
+
+  /* Hide the actual header row but keep it accessible */
+  thead {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  /* The thick black border between row groups in your screenshot */
+  tr {
+    border-bottom: 2px solid #000;
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 15px 250px 15px 15px;
+    color: gray;
+  }
+
+  .table-2 td {
+    padding-right: 213px;
+  }
+
+  /* Remove border from the last cell in a row group */
+  tr:last-child > td {
+    border-bottom: none;
+  }
+
+  /* Injecting Labels using CSS */
+  td::before {
+    font-weight: bold;
+    color: #333;
+    
+    /* Ellipsis logic for the label itself */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 65%; 
+  }
+
+  /* Specific labels for Table 1 */
+  .table-1 td:nth-of-type(1)::before { content: "Title 1"; }
+  .table-1 td:nth-of-type(2)::before { content: "Title 2 is a very long title"; }
+  .table-1 td:nth-of-type(3)::before { content: "Title 3"; }
+
+  /* Specific labels for Table 2 */
+  .table-2 td:nth-of-type(1)::before { content: "Header 1"; }
+  .table-2 td:nth-of-type(2)::before { content: "Header 2"; }
+  .table-2 td:nth-of-type(3)::before { content: "Header 3"; }
 }
