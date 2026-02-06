@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font: 14px/1.5 Lato, sans-serif;
+}
+
+body {
+  background-color: lightgray;
+}
+
+.login-section {
+  width: 35%;
+  margin: auto;
+  margin-top: 3.5em;
+  background-color: white;
+  padding: 1.5em 2.5em 2.5em 2.5em;
+  border-radius: 3px;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset {
+  border: none;
+  padding-bottom: 1.5rem;
+}
+
+legend {
+  font-size: 1.5em;
+  font-weight: bold;
+  border-bottom: 2px solid lightgray;
+  padding-bottom: 1.5rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+input {
+  margin-bottom: 1.75em;
+  height: 2.8em;
+  border-radius: 5px;
+  border: solid 1px lightgray;
+  padding: 0.5em;
+}
+
+button {
+  height: 2.8em;
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+
+.login-section label:has(+ input:required)::after {
+  content: '*';
+  color: red;
+  padding: 0.2em;
+  display: inline-block;
+}
