@@ -13,4 +13,4 @@ function daysOfWeek(day: number): void {
 }
 
 daysOfWeek(5); // Output: Friday
-daysOfWeek(10); //Output: error
+daysOfWeek(10); // Output: error
