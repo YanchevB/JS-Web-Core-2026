@@ -8,7 +8,7 @@ function operator(
         return param[operand];   
     } else if (operation === 'Length' && typeof param !== 'number') {
         return param.length % operand;
-    } else if (operation === 'Add') {
+    } else if (operation === 'Add' && !Array.isArray(param)) {
         return Number(param) + operand
     }
 }
