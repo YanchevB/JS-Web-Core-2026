@@ -1,5 +1,18 @@
-class Mechanic<T> {
-    technicalInspection(car: T): boolean { return true; }
+type CarStructure = {
+    engine: {
+        horsepower: number
+    },
+    tires: {
+        model: string,
+        airPressure: number
+    },
+    body: {
+        material: string
+    }
+}
+
+class Mechanic<T extends CarStructure> {
+    technicalInspection(car: T): boolean { return true }
 }
 
 
@@ -13,8 +26,8 @@ let maybeCar5 = { engine: { horsepower: '220', type: 'electric' }, tires: { mode
 
 console.log(mechanic.technicalInspection(someCar)); //ok 
 console.log(mechanic.technicalInspection(maybeCar2)); //ok 
-console.log(mechanic.technicalInspection(maybeCar4)); //TS Error 
-console.log(mechanic.technicalInspection(notACar)); //TS Error 
-console.log(mechanic.technicalInspection(maybeCar)); //TS Error 
-console.log(mechanic.technicalInspection(maybeCar3)); //TS Error 
-console.log(mechanic.technicalInspection(maybeCar5)); //TS Error
+// console.log(mechanic.technicalInspection(maybeCar4)); //TS Error 
+// console.log(mechanic.technicalInspection(notACar)); //TS Error 
+// console.log(mechanic.technicalInspection(maybeCar)); //TS Error 
+// console.log(mechanic.technicalInspection(maybeCar3)); //TS Error 
+// console.log(mechanic.technicalInspection(maybeCar5)); //TS Error
