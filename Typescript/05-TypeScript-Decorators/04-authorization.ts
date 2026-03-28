@@ -1,19 +1,15 @@
 
 //TODO: Solve exercise
 
-class Age1 {
+class MockAuthrizationService {
+    constructor(private userRole: 'Guest' | 'PersonalDataAdministrator' | 'Admin') { }
 
-    private _age!: number;
-
-    constructor(age: number){
-        this.age = age;
-    }
-
-    set age(val: number){ 
-        this._age = val; 
-    }
-
-    get age() { 
-        return this._age; 
+    canViewData(property: string) { 
+        switch (this.userRole) {
+            case 'Admin': return true;
+            case 'PersonalDataAdministrator': return ['name', 'age']
+                .includes(property);
+            default: return false;
+        }
     }
 }
