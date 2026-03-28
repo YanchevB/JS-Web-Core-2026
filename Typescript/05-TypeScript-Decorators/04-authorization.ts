@@ -23,8 +23,7 @@ class MockAuthorizationService {
     canViewData(property: string) { 
         switch (this.userRole) {
             case 'Admin': return true;
-            case 'PersonalDataAdministrator': return ['name', 'age']
-                .includes(property);
+            case 'PersonalDataAdministrator': return ['name', 'age'].includes(property);
             default: return false;
         }
     }
