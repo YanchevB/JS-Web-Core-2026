@@ -1,7 +1,7 @@
 
 //TODO: Solve exercise
 
-class MockAuthrizationService {
+class MockAuthorizationService {
     constructor(private userRole: 'Guest' | 'PersonalDataAdministrator' | 'Admin') { }
 
     canViewData(property: string) { 
