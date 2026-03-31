@@ -10,24 +10,19 @@ function manageCache(
     const originalMethod = descriptor.value;
 
     descriptor.value = function() {
-        if (!lastUpdated) {
+        const currentTime = new Date();
+
+        if (!lastUpdated || currentTime.getTime() - lastUpdated.getTime() >= 5000) {
             const upToDateData = originalMethod.call(this);
             cache = upToDateData.slice();
             lastUpdated = new Date();
-            return cache;
         } else {
-            const currentTime = new Date();
-            if ((currentTime.getTime() - lastUpdated.getTime() < 5000)) {
-                console.log('Returned from cache');
-                return cache;
-            } else {
-                const upToDateData = originalMethod.call(this);
-                cache = upToDateData.slice();
-                lastUpdated = new Date();
-                return cache;
-            }
+            console.log('Returned from cache');
         }
+        
+        return cache
     }
+
     return descriptor;
 }
 
