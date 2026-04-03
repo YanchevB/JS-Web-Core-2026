@@ -2,7 +2,9 @@ import { MenuManager } from './menu-manager';
 import { WelcomeSnack, MainCourse, Dessert } from './menu-item-types';
 import { Client } from './models';
 
-
+//This file was configured in a separate working folder with a separate tsconfig file
+//and will not work with terminal commands like 'npx ts-node index.ts'. 
+//It has been added for showcasing purposes only, together with all imported files.
 const menuManager = new MenuManager();
 
 // --- Test 1: Add Menu Items ---
